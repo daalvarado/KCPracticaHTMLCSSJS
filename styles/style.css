@@ -18,84 +18,128 @@ html {
 }
 
 body {
-    margin:0px;
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 100vh 400vh auto;
-}
-
-.header{
-    background-color: var(--white);
-    z-index: -1;
-}
-
-.header_title {
-  position: absolute;
-  left: 10%;
-  top: 25%;
-  width: 100%;
-  color: white;
-  font-family: 'Nunito Sanz', Helvetica, Arial, sans-serif;
-  font-weight: 100;
-  font-size: 50px;
-  text-transform:uppercase;
-}   
-
-.header_text {
-  position: absolute;
-  left: 10%;
-  top: 35%;
-  width: 100%;
-  color: white;
-  font-family: 'Nunito Sanz', Helvetica, Arial, sans-serif;
-  font-weight: 100;
-  font-size: 30px;
-  
-}   
-
-.header_image{
-    background-image: url(../resources/foto1.jpg);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 100vh;
+    margin: 0px;
 }
 
  .navbar {  
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 1fr;
-    grid-auto-flow: column;
     background-color: #4392F1;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    position:fixed;
+    justify-content: flex-end;
     align-items: center;
-    grid-column: 1 / -1;
-    position:sticky;
-    top:0;
-    }
+}
 
 .nav {
   display: grid;
-  height: auto;
+  height: 60px;
   justify-content: center;
   align-items: center;
-  /*border: 5px solid rgba(0, 0, 0, 0.03);*/
-  border-radius: 3px;
+  width: 140px;
+  border-radius: 5px;
   font-size: 20px;
   font-weight: 400;
-  padding: 10px;
+  padding:0px;
   margin: 0px;
   border: #4392F1;
-  /*background-color: var(--white);*/
   color: var(--white);
+  opacity: 0.4;
   text-transform:uppercase;
   font-family: 'Mukta Malar';
   text-decoration: none;
   background-color: #4392F1;
 }
 
+.active {
+    background-color: rgba(0,0,0,0.2);
+    opacity:1;
+}   
+
+.nav:hover{
+    background-color: #ff8800d7;
+    opacity:1;
+}
+
+.content {
+    margin:0px;
+    display:grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 400vh auto;
+}
+
+.header{
+    background-color: var(--white);
+    z-index: -1;
+    display:grid;
+    grid-template-columns: 1fr;
+    background-image: url(https://source.unsplash.com/pUAM5hPaCRI);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+}
+
+.header_title {
+  position: absolute;
+    width: 100%;
+  text-align: center;
+  top: 7%;
+  color: #131313;
+  font-family: 'Kaushan Script','Nunito Sanz', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+  text-transform:uppercase;
+}   
+
+.header_text {
+  width: 100%;
+  text-align: center;
+  top: 80%;
+  color: #131313;
+  font-family: 'Nunito Sanz', Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 40px;
+  
+}   
 
 
+#quienSoy {
+    display: grid;
+    height: 80vh;
+    background: linear-gradient(white, white, var(--grey));
+}
 
+#estudios {
+    display: grid;
+    height: 80vh;
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    justify-items: center;
+    align-items: center;
+}
+
+.estudio-cuadro {
+    display:grid;
+    width: 750px;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+    justify-items: left;
+    align-items: center;
+    border-radius: 15px;
+    border: 5px dashed black;
+}
+
+.detalle {
+    display:grid;
+    justify-content: left;
+    justify-items: left;
+    grid-template-rows: auto auto auto;
+    font-size: 30px;
+}
 
 .footer{
     display:grid;
