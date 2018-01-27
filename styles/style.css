@@ -14,7 +14,7 @@ html {
     font-weight: 200;
     font-size: 10px;
     color: var(--black);
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+    /*text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);*/
 }
 
 body {
@@ -25,6 +25,7 @@ body {
     background-color: #4392F1;
     display: flex;
     flex-direction: row;
+    height:60px;
     width: 100vw;
     position:fixed;
     justify-content: flex-end;
@@ -62,6 +63,7 @@ body {
 }
 
 .content {
+    padding-top: 60px;
     margin:0px;
     display:grid;
     width: 100vw;
@@ -72,9 +74,10 @@ body {
 
 .header{
     background-color: var(--white);
-    z-index: -1;
-    display:grid;
-    grid-template-columns: 1fr;
+    /*z-index: -1;*/
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     background-image: url(https://source.unsplash.com/pUAM5hPaCRI);
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -83,15 +86,15 @@ body {
 }
 
 .header_title {
-  position: absolute;
-    width: 100%;
   text-align: center;
-  top: 7%;
   color: #131313;
   font-family: 'Kaushan Script','Nunito Sanz', Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 80px;
   text-transform:uppercase;
+  grid-column: 4/10;
+  grid-row: 2/4;
+  margin: 0px;
 }   
 
 .header_text {
@@ -105,6 +108,15 @@ body {
   
 }   
 
+.won {
+    display: grid;
+    grid-column: 5/9;
+    grid-row: 5/9;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    
+}
 
 #quienSoy {
     display: grid;
@@ -114,7 +126,7 @@ body {
 
 #estudios {
     display: grid;
-    height: 80vh;
+    height: 60vh;
     background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
@@ -125,12 +137,11 @@ body {
 .estudio-cuadro {
     display:grid;
     width: 750px;
-    grid-template-columns: auto auto;
+    grid-template-columns: 250px auto;
     grid-template-rows: 1fr;
     justify-items: left;
     align-items: center;
-    border-radius: 15px;
-    border: 5px dashed black;
+    
 }
 
 .detalle {
@@ -141,9 +152,28 @@ body {
     font-size: 30px;
 }
 
+.centro {
+    color: white;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.logo {
+    width:195px;
+    height:195px;
+    border-radius:10%;
+    overflow:hidden;
+}
+
+.estudioTitulo{
+    font-size: 100px;
+    opacity: 0.5;
+}
 .footer{
     display:grid;
     background-color: var(--blue);
+    text-decoration: none;
     color: var(--white);
     align-items: center;
     font-size: 15px;
