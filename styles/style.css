@@ -19,6 +19,7 @@ html {
 
 body {
     margin: 0px;
+    overflow-x: hidden;
 }
 
  .navbar {  
@@ -27,9 +28,11 @@ body {
     flex-direction: row;
     height:60px;
     width: 100vw;
+    max-width: 100%;
     position:fixed;
     justify-content: flex-end;
     align-items: center;
+    z-index: 1;
 }
 
 .nav {
@@ -69,7 +72,7 @@ body {
     width: 100vw;
     max-width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 400vh auto;
+    grid-template-rows: auto auto auto;
 }
 
 .header{
@@ -121,12 +124,12 @@ body {
 #quienSoy {
     display: grid;
     height: 80vh;
-    background: linear-gradient(white, white, var(--grey));
+    background: var(--grey);
 }
 
 #estudios {
     display: grid;
-    height: 60vh;
+    height: 665px;
     background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
@@ -170,6 +173,82 @@ body {
     font-size: 100px;
     opacity: 0.5;
 }
+
+.expTitulo{
+    font-size: 100px;
+    opacity: 0.5;
+    grid-column: 3/4;
+}
+
+#experiencia {
+    padding: 20px;
+    display: grid;
+    grid-gap: 40px;
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, 400px);
+}
+
+.exp-cuadro {
+    display:grid;
+    grid-template-rows: 100px 50px 30px 30px auto;
+    border: 1px solid rgb(22, 20, 20);
+    max-width: 400px;
+}
+
+.logoexp img{
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    margin: 0px;
+    max-width: 400px;
+   }  
+
+ .logoexp {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    max-width: 400px;
+    margin: 0px;
+}
+
+.centrotrab {
+    display: grid;
+    justify-content: center;
+    font-size: 30px;
+    margin: 0px;
+    background-color: #002A32;
+    color: white;
+    max-width: inherit;
+}
+
+.posicion {
+    display: grid;
+    justify-content: center;
+    background-color: #002A32;
+    font-size: 15px;
+    color: white;
+    margin: 0px;
+    max-width: inherit;
+}
+
+.fechastrab {
+    display: grid;
+    justify-content: center;
+    background-color: #002A32;
+    color: white;
+    margin: 0px;
+    max-width: inherit;
+    font-size: 15px;
+}
+
+.descripcion {
+    display: grid;
+    padding: 15px;
+    max-width: inherit;
+    font-size: 15px;
+    
+}
+
 .footer{
     display:grid;
     background-color: var(--blue);
