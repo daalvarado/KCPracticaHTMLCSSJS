@@ -249,6 +249,142 @@ body {
     
 }
 
+#contacto {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    background-color: #131313;
+
+}
+
+.conTitulo {
+    display: grid;
+    font-size: 100px;
+    opacity: 0.5;
+    align-content: center;
+    justify-content: center;
+    color: white;
+}
+
+.links {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100%;
+    color: white;
+    align-content: center;
+    justify-items: center;
+    padding: 20px;
+
+}
+
+.red {
+    display: grid;
+    grid-template-columns: 100px 50px 500px;
+    
+}
+.logored {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    max-width: 100px;
+    margin: 0px;
+}
+
+.logored img {
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    margin: 0px;
+    max-width: 100px;
+}
+
+.red a{
+    display: grid;
+    color: white;
+    align-content: center;
+    justify-items: left;
+    font-size: 20px;
+    grid-column: 3;
+    text-decoration: none;
+}
+
+.mensaje {
+    display:grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    padding: 20px;
+}
+
+.mensaje h1 {
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.formulario {
+    display:grid;
+    grid-gap: 20px;
+    grid-template-columns: 400px 500px;
+    grid-template-rows: repeat(8, auto);
+    color: white;
+    font-size: 15px;
+}
+
+.campo {
+    text: white;
+    display: grid;
+    grid-column: 1;
+    grid-template-columns: 300px 100px;
+}
+
+.campo input{
+    grid-row: 2;
+}
+
+.campo2 {
+    text: white;
+    display: grid;
+    grid-column: 1;
+    width: 400px;
+}
+
+
+.comments {
+    grid-column: 2;
+    grid-row: 1/8;
+}
+
+.comments textarea{
+    
+    grid-column: 2;
+    max-width: 100%;
+}
+
+textarea {
+    display: grid;
+    grid-column: 2;
+    max-width: 100%;
+}
+
+input + span {
+  grid-row: 2;  
+  padding-right: 20px;
+}
+
+input:invalid+span:after {
+    position: absolute;
+    content: '✖';
+  color: #8b0000;
+}
+
+input:valid+span:after {
+  position: absolute;
+  content: '✓';
+  padding-left: 5px;
+  color: #009000;
+}
+
 .footer{
     display:grid;
     background-color: var(--blue);
@@ -256,5 +392,5 @@ body {
     color: var(--white);
     align-items: center;
     font-size: 15px;
-    padding:10px;
+    padding:15px;
 }

@@ -141,6 +141,62 @@
             </section>
 
             <section id="contacto">
+                <h1 class="conTitulo">Contacto</h1>
+                <article class="links">
+                    <div class="red">
+                        <figure class="logored">
+                            <img src="resources/email.png">
+                        </figure>
+                        <a class="linka email" href="email:diego23k@gmail.com" style="text-decoration:none;">diego23k@gmail.com</a>
+                    </div>
+                    <div class="red">
+                        <figure class="logored">
+                            <img src="resources/linkedin.png">
+                        </figure>
+                        <a class="linka linkedin" href="https://www.linkedin.com/in/daalvaradoc">https://www.linkedin.com/in/daalvaradoc</a>
+                    </div>
+                    <div class="red">
+                        <figure class="logored">
+                            <img src="resources/github.png">
+                        </figure>
+                        <a class="linka github" href="https://github.com/daalvarado">https://github.com/daalvarado</a>
+                    </div>
+                </article>
+                <article class="mensaje">
+                    <h1 class="dejame">Déjame un mensaje!</h1>
+                    <form class="formulario" >
+                            <div class="campo">Nombre:
+                            <input type="text" name="firstname" required minlength="3" pattern=[A-Za-z\s]+><span class="valido"></span></div>
+                            <div class="campo">Apellido:
+                            <input type="text" name="lastname" required minlength="3" pattern=[A-Za-z\s]+><span class="valido"></span>
+                            </div>
+                            <div class="campo"><label for="emailaddress">Correo electronico</label>
+                            <input type="email" id="emailaddress" required minlength="6"><span class="valido"></span>
+                            </div>
+                            <div class="campo">Telefono (en la forma xxx-xxx-xxx)
+                            <input type="tel" name="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"><span class="valido"></span></div>
+                            <div class="campo2">Como me has conocido
+                            <select name="conocido">
+                                <option value="linkedIn">linkedIn</option>
+                                <option value="github">Github</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Amigos">Amigos</option>
+                                <option value="Otros">Otros - especificar</option>
+                            </select></div>
+                            <br>
+                            <br>
+
+                            <div class="comments">Comentarios<br>
+                            <textarea name="mensaje" rows="20" cols="60" required></textarea></div>
+
+                            <input type="submit" value="Enviar" class="enviar">
+                    </form>
+
+
+                </article>
+                <article class="zonamensajes">
+                    <div class="mensajes"></div>
+                </article>
 
             </section>
         </main>
