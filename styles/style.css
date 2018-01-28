@@ -326,7 +326,7 @@ body {
     display:grid;
     grid-gap: 20px;
     grid-template-columns: 400px 500px;
-    grid-template-rows: repeat(8, auto);
+    grid-template-rows: 47px 47px 47px 47px 47px 47px 22px;
     color: white;
     font-size: 15px;
 }
@@ -357,6 +357,20 @@ body {
     grid-column: 2;
     grid-row: 1/8;
     
+}
+
+input#submit{
+    grid-row:7;
+}
+
+#limitePal{
+    grid-row:7;
+    grid-column:2;
+    color: red;
+}
+
+#limitePal.hidden{
+    display: none;
 }
 
 .comments textarea{

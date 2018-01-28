@@ -164,7 +164,7 @@
                 </article>
                 <article class="mensaje">
                     <h1 class="dejame">Déjame un mensaje!</h1>
-                    <form class="formulario" >
+                    <form class="formulario" method="get" >
                             <div class="campo">Nombre:
                             <input type="text" id="firstName" required minlength="3" pattern=[A-Za-z\s]+><span class="valido"></span></div>
                             <div class="campo">Apellido:
@@ -175,22 +175,21 @@
                             </div>
                             <div class="campo">Telefono (con formato xxx-xxx-xxx)
                             <input type="tel" id="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"><span class="valido"></span></div>
-                            <div class="campo2">Como me has conocido
-                            <select id="conocido">
+                            <div class="campo2">Como me has conocido?
+  `                          <select id="conocido">
                                 <option value="linkedIn">linkedIn</option>
                                 <option value="github">Github</option>
                                 <option value="Facebook">Facebook</option>
                                 <option value="Amigos">Amigos</option>
                                 <option value="Otros">Otros</option>
                             </select></div>
-                            <div class="campo2 hidden">Especificar
-                            <input type="text" id="others" required minlength="3"></div>
-                            <input type="submit" value="Submit" id="submit" class="enviar">
+                            <div id="others" class="campo2 hidden">Especificar
+                            <input type="text"></div>
+                            <input type="submit" value="Enviar" id="submit" class="enviar">
 
                             <div class="comments">Comentarios<br>
-                            <textarea id="mensaje" rows="20" cols="60" required></textarea></div>
-
-                            
+                            <textarea id="mensaje" rows="20" cols="60" required placeholder="Máximo 150 palabras"></textarea></div>
+                            <div id="limitePal" class="hidden"></div>
                     </form>
 
 
@@ -213,6 +212,7 @@
 </style>
 
     <script src="./scripts/cvweb.js"></script>
+    <script src="./scripts/ajax.js"></script>
     
 </body>
 </html>

@@ -54,6 +54,13 @@ var numWords = 0;
 var maxWords = 300;
 
 
+
+
+
+
+
+
+
 //nuevo campo
 conocido.addEventListener("change", function() {
   if (conocido.value === "Otros") {
