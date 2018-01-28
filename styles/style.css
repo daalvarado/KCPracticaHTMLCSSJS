@@ -124,7 +124,7 @@ body {
 #quienSoy {
     display: grid;
     height: 80vh;
-    background: var(--grey);
+    background: rgb(37, 48, 59);
 }
 
 #estudios {
@@ -253,7 +253,7 @@ body {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    background-color: #131313;
+    background-color: rgb(37,48,59);
 
 }
 
@@ -332,7 +332,7 @@ body {
 }
 
 .campo {
-    text: white;
+    color: white;
     display: grid;
     grid-column: 1;
     grid-template-columns: 300px 100px;
@@ -343,22 +343,28 @@ body {
 }
 
 .campo2 {
-    text: white;
+    color: white;
     display: grid;
     grid-column: 1;
     width: 400px;
 }
 
+.campo2.hidden {
+    display: none;
+}
 
 .comments {
     grid-column: 2;
     grid-row: 1/8;
+    
 }
 
 .comments textarea{
     
     grid-column: 2;
     max-width: 100%;
+    background-color: rgb(37, 48, 59);
+    color: white;
 }
 
 textarea {

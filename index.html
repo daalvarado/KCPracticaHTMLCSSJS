@@ -166,30 +166,31 @@
                     <h1 class="dejame">Déjame un mensaje!</h1>
                     <form class="formulario" >
                             <div class="campo">Nombre:
-                            <input type="text" name="firstname" required minlength="3" pattern=[A-Za-z\s]+><span class="valido"></span></div>
+                            <input type="text" id="firstName" required minlength="3" pattern=[A-Za-z\s]+><span class="valido"></span></div>
                             <div class="campo">Apellido:
-                            <input type="text" name="lastname" required minlength="3" pattern=[A-Za-z\s]+><span class="valido"></span>
+                            <input type="text" id="lastName" required minlength="3" pattern=[A-Za-z\s]+><span class="valido"></span>
                             </div>
                             <div class="campo"><label for="emailaddress">Correo electronico</label>
-                            <input type="email" id="emailaddress" required minlength="6"><span class="valido"></span>
+                            <input type="email" id="emailaddress" required minlength="6"><span></span>
                             </div>
-                            <div class="campo">Telefono (en la forma xxx-xxx-xxx)
-                            <input type="tel" name="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"><span class="valido"></span></div>
+                            <div class="campo">Telefono (con formato xxx-xxx-xxx)
+                            <input type="tel" id="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"><span class="valido"></span></div>
                             <div class="campo2">Como me has conocido
-                            <select name="conocido">
+                            <select id="conocido">
                                 <option value="linkedIn">linkedIn</option>
                                 <option value="github">Github</option>
                                 <option value="Facebook">Facebook</option>
                                 <option value="Amigos">Amigos</option>
-                                <option value="Otros">Otros - especificar</option>
+                                <option value="Otros">Otros</option>
                             </select></div>
-                            <br>
-                            <br>
+                            <div class="campo2 hidden">Especificar
+                            <input type="text" id="others" required minlength="3"></div>
+                            <input type="submit" value="Submit" id="submit" class="enviar">
 
                             <div class="comments">Comentarios<br>
-                            <textarea name="mensaje" rows="20" cols="60" required></textarea></div>
+                            <textarea id="mensaje" rows="20" cols="60" required></textarea></div>
 
-                            <input type="submit" value="Enviar" class="enviar">
+                            
                     </form>
 
 
