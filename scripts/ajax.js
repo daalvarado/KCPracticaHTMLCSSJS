@@ -1,4 +1,4 @@
-var xhr = new XMLHttpRequest();
+/*var xhr = new XMLHttpRequest();
 
 xhr.open("POST", "http://localhost:8000/api", true);
 xhr.setRequestHeader("Content-Type", "application/json");
@@ -13,4 +13,4 @@ var data= {
     name: "Diego"
 };
 xhr.send(JSON.stringify(data));
-
+*/

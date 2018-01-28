@@ -9,18 +9,11 @@ $('a[href*="#"]')
             scrollTop: target.offset().top-60
           },
           1000,
-          function() {
-            var $target = $(target);
-            $target.focus();
-            if ($target.is(":focus")) {
-              return false;
-            } else {
-              $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
-              $target.focus(); // Set focus again
+        )
             }
-          }
+          
         );
-      });
+      ;
 
 
   $('.nav').on('click',function(){
@@ -48,16 +41,59 @@ var conocido = document.getElementById("conocido");
 var conocidoOthers = document.getElementById("others");
 var mensaje = document.getElementById("mensaje");
 var submit = document.getElementById("submit");
-var form = document.getElementById("formulario");
+var form = document.getElementsByName("formulario")[0];
 
 var numWords = 0;
 var maxWords = 300;
 
+form.addEventListener("submit", function(event) {
+ 
+  clearLimites();
+
+  if (mensaje.value.length === 0) {
+    limites("Por favor introduce un mensaje");
+    event.preventDefault();
+    return false;
+  }
+
+  if (mensaje.value.split(" ").length > 3) {
+    limites("El mensaje no puede contener más de 150 palabras");
+    event.preventDefault();
+    return false;
+  }
+
+    var regex = /[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+/;
+    var resultEmailValidation = regex.test(email.value);
+
+    if (resultEmailValidation === false) {
+      limites("Tienes que escribir un email correcto");
+      email.focus();
+      event.preventDefault();
+      return false;
+    }
+
+  submit.setAttribute("disabled", "");
+  event.preventDefault();
+
+  setTimeout(function() {
+    form.reset();
+    sendNotification("Formulario recibido", "Gracias por participar");
+    submit.removeAttribute("disabled");
+  }, 1000);
+});
 
 
+function limites(notificacion){
+    var noti=document.querySelector("#limitePal");
+    noti.classList.remove("hidden");
+    noti.textContent=notificacion;
+}
 
-
-
+function clearLimites(){
+     var noti = document.querySelector("#limitePal");
+     noti.classList.add("hidden");
+     noti.textContent = "";
+}
 
 
 
