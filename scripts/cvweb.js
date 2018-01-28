@@ -1,4 +1,4 @@
-/* Smooth scroll */
+//smooth scroll
 
 $('a[href*="#"]')
   .click(function(event) {
@@ -21,17 +21,6 @@ $('a[href*="#"]')
     $(this).addClass('active');
   })
 
-function checkWordCount() {
-  s = document.getElementById("mensaje").value;
-  s = s.replace(/(^\s*)|(\s*$)/gi, "");
-  s = s.replace(/[ ]{2,}/gi, " ");
-  s = s.replace(/\n /, "\n");
-  if (s.split(" ").length <= 300) {
-    alarm("not enough words...");
-    return false;
-  }
-}
-
 
 var firstName = document.getElementById("firstName");
 var lastName = document.getElementById("lastName");
@@ -43,8 +32,8 @@ var mensaje = document.getElementById("mensaje");
 var submit = document.getElementById("submit");
 var form = document.getElementsByName("formulario")[0];
 
-var numWords = 0;
-var maxWords = 300;
+
+//validacion formulario
 
 form.addEventListener("submit", function(event) {
  
@@ -82,6 +71,7 @@ form.addEventListener("submit", function(event) {
   }, 1000);
 });
 
+//funciones para formulario
 
 function limites(notificacion){
     var noti=document.querySelector("#limitePal");
@@ -97,7 +87,7 @@ function clearLimites(){
 
 
 
-//nuevo campo
+//agrego campo nuevo
 conocido.addEventListener("change", function() {
   if (conocido.value === "Otros") {
     conocidoOthers.classList.remove("hidden");
