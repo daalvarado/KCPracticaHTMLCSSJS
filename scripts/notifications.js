@@ -12,7 +12,7 @@ function sendNotification(title, body) {
   } else {
     notification.requestPermission(function(permission) {
       if (Notification.permission === "granted") {
-        new Notification(title, options);
+        new notification(title, options);
       }
     });
   }

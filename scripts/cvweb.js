@@ -15,12 +15,24 @@ $('a[href*="#"]')
         );
       ;
 
+//barra navegacion
 
   $('.nav').on('click',function(){
     $('a.nav').removeClass('active');
     $(this).addClass('active');
   })
 
+// fotos quien soy
+$(document).ready(function(){
+  setInterval(function(){
+    $('.fotodiego').toggleClass('imgHidden');
+  }, 1000);
+});
+
+
+$('.fotoDiego').on('click',function(){
+  $('.fotodiego').toggleClass('imgHidden');
+})
 
 var firstName = document.getElementById("firstName");
 var lastName = document.getElementById("lastName");
@@ -45,7 +57,7 @@ form.addEventListener("submit", function(event) {
     return false;
   }
 
-  if (mensaje.value.split(" ").length > 3) {
+  if (mensaje.value.split(" ").length > 150) {
     limites("El mensaje no puede contener más de 150 palabras");
     event.preventDefault();
     return false;
@@ -66,6 +78,7 @@ form.addEventListener("submit", function(event) {
 
   setTimeout(function() {
     form.reset();
+    conocidoOthers.classList.add("hidden");
     sendNotification("Formulario recibido", "Gracias por participar");
     submit.removeAttribute("disabled");
   }, 1000);
@@ -94,3 +107,6 @@ conocido.addEventListener("change", function() {
   } else {
     conocidoOthers.classList.add("hidden");
   }});
+
+  //cambio foto quiensoy
+

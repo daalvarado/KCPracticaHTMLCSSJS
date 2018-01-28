@@ -123,8 +123,41 @@ body {
 
 #quienSoy {
     display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 30px;
+    color: white;
     height: 80vh;
     background: rgb(37, 48, 59);
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.fotoDiego{
+    display:grid;
+    width: 500px;
+    height:500px;
+    align-items: center;
+    z-index: 0;
+}
+
+img.imgHidden {
+    display:none;
+}
+
+.fotoDiego img{
+    height: auto;
+    width: auto;
+    max-height: 100%;
+    margin: 0px;
+    max-width: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.Diego {
+    font-size: 40px;
+    width: 700px;
 }
 
 #estudios {
@@ -198,9 +231,9 @@ body {
 .logoexp img{
     height: auto;
     width: auto;
-    max-height: 100%;
+    max-height: 100px;
     margin: 0px;
-    max-width: 400px;
+    max-width: 100%;
    }  
 
  .logoexp {
@@ -335,7 +368,7 @@ body {
     color: white;
     display: grid;
     grid-column: 1;
-    grid-template-columns: 300px 100px;
+    grid-template-columns: 350px 50px;
 }
 
 .campo input{
